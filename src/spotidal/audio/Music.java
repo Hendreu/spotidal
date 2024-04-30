@@ -5,7 +5,6 @@ public class Music extends Audio {
     private boolean single;
     private String band;
     private String singer;
-    private String title;
 
     @Override
     public String toString() {
@@ -13,18 +12,16 @@ public class Music extends Audio {
                 "Musica: %s " +
                 "\nBanda: %s " +
                 "\nAlbum: %s " +
-                "\nDuração: %s minutos e 2 segundos"
-                ,this.title, this.band, this.album, this.getDuration());
+                "\nDuração: %s minutos e 2 segundos" +
+                "\n%s um single"
+
+                ,this.title,
+                this.band,
+                this.album,
+                this.getDuration(),
+                this.single ? "É":"Não é");
     }
 
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getAlbum() {
         return album;

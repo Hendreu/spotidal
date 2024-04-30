@@ -4,10 +4,25 @@ public class Audio {
     private int listeners;
     private int favorites;
     private int monthListeners;
-    private boolean favorited;
     protected static int duration;
-    private int classification;
+    private String genre;
+    protected String title;
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public int getListeners() {
         return listeners;
@@ -33,13 +48,6 @@ public class Audio {
         this.monthListeners = monthListeners;
     }
 
-    public boolean isFavorited() {
-        return favorited;
-    }
-
-    public void setFavorited(boolean favorited) {
-        this.favorited = favorited;
-    }
 
     public static int getDuration() {
         return duration;
@@ -48,12 +56,10 @@ public class Audio {
     public static void setDuration(int duration) {
         Audio.duration = duration;
     }
-
-    public int getClassification() {
-        return classification;
+    public void like(){
+        this.favorites++;
     }
-
-    public void setClassification(int classification) {
-        this.classification = classification;
+    public void played(){
+        this.listeners++;
     }
 }
